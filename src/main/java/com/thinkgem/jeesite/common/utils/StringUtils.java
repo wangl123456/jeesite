@@ -172,8 +172,10 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 		StringBuffer result = new StringBuffer();
 		int n = 0;
 		char temp;
-		boolean isCode = false; // 是不是HTML代码
-		boolean isHTML = false; // 是不是HTML特殊字符,如&nbsp;
+		// 是不是HTML代码
+		boolean isCode = false;
+		// 是不是HTML特殊字符,如&nbsp;
+		boolean isHTML = false;
 		for (int i = 0; i < param.length(); i++) {
 			temp = param.charAt(i);
 			if (temp == '<') {
