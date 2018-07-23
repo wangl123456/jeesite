@@ -39,7 +39,12 @@ public class UserPasswordController extends BaseController {
 	@Autowired
 	private SystemService systemService;
 	
-
+	/**
+	 * 入口
+	 * @param user
+	 * @param model
+	 * @return
+	 */
 	@RequiresPermissions("sys:password:view")
 	@RequestMapping(value = "password")
 	public String form(User user, Model model) {
