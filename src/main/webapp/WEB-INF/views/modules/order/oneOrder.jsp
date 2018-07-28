@@ -152,9 +152,31 @@
 						<input  class="easyui-textbox" required="required" placeholder="人员信息二级可查看信息..."/> 
 					</td>				
 				</tr>
-				
+
 				<tr>
-				
+					<div class="control-group">
+						<label class="control-label">用户类型:</label>
+						<div class="controls">
+							<select name="userType" class="input-xlarge">
+								<option value="" label="请选择"/>
+								<c:forEach items="${fns:getDictList('civil_user_type')}" var="user">
+									<option value="${user.value}" label="${user.label}"/>
+								</c:forEach>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label">是否存在:</label>
+						<div class="controls">
+							<select name="userType" class="input-xlarge">
+								<option value="" label="请选择"/>
+								<c:forEach items="${yesAndNo}" var="ynFor">
+									<option value="${ynFor.value}" label="${ynFor.name}"/>
+								</c:forEach>
+							</select>
+						</div>
+					</div>
 				</tr>
 			</tbody>
 		</table>

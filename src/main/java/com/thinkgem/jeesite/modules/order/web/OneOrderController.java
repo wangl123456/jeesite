@@ -1,13 +1,15 @@
 package com.thinkgem.jeesite.modules.order.web;
 
+import com.google.common.collect.Lists;
+import com.thinkgem.jeesite.common.enums.EnumBean;
+import com.thinkgem.jeesite.common.enums.YesAndNoType;
 import com.thinkgem.jeesite.common.web.BaseController;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /***
  *
@@ -34,14 +36,22 @@ public class OneOrderController extends BaseController {
 
 	/**
 	 * 一级订单查看
-	 * @param request
-	 * @param response
 	 * @param model
 	 * @return
 	 */
 	@RequiresPermissions("order:one:view")
 	@RequestMapping(value = {"list", ""})
-	public String list(HttpServletRequest request, HttpServletResponse response, Model model) {
+	public String list( Model model) {
+
+		// 获取字典类型
+		List<EnumBean> typeList = Lists.newArrayList();
+		for (YesAndNoType type : YesAndNoType.values()) {
+			EnumBean enums = new EnumBean();
+			enums.setValue(type.getValue());
+			enums.setName(type.getContent());
+			typeList.add(enums);
+		}
+		model.addAttribute("yesAndNo", typeList);
 
 		return "modules/order/oneOrder";
 	}

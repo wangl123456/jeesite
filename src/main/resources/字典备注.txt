@@ -1,0 +1,4 @@
+civil_user_type 	土建负责人
+electric_user_type	电气负责人
+rebar_user_type	    钢筋负责人
+water_user_type	    水暖负责人
