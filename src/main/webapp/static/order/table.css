@@ -1,4 +1,4 @@
-.table {
+.oderTable {
 	border-spacing: 0;
 	border-collapse: collapse;
 	border-style: solid;
@@ -8,7 +8,7 @@
 	width: 100%;
 }
 
-.table th {
+.oderTable th {
 	border-width: 1px 1px 0 0;
 	border-style: dotted;
 	border-color: #dddddd;
