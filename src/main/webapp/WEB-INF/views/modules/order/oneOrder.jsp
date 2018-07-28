@@ -5,12 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>积分详情</title>
-<script type="text/javascript" src="${ctxStatic}/order/table.css">
+<link rel="stylesheet" type="text/css" href="${ctxStatic}/order/table.css" charset="utf-8" />
+<script type="text/javascript">
+
 </script>
 </head>
 <body>
-	
-	<form action="">
+	<form action="${ctx}/oder/one" method="post">
 		<table class="table">
 			<thead>
 				<tr>
