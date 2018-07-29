@@ -38,9 +38,9 @@
         </tr>
         <tr>
             <td style="color: red;">项目名称</td>
-            <td colspan="3">自动连接一级交底单</td>
+            <td colspan="3"><input type="text" placeholder="自动连接一级交底单"></td>
             <td style="color: red;">项目编号</td>
-            <td>自动连接一级交底单</td>
+            <td><input type="text" placeholder="自动连接一级交底单"></td>
             <td></td>
             <td></td>
         </tr>
@@ -417,6 +417,217 @@
             <td></td>
         </tr>
 
+        <tr>
+            <td rowspan="6" style="color: red;">业主提供的资料明细：</td>
+            <td colspan="2" style="color: red;">委托单</td>
+            <td>自动连接一级交底单</td>
+            <td style="color: red;">清单模板</td>
+            <td colspan="2">自动链接一级交底单信息</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="color: red;">招标文件</td>
+            <td>自动连接一级交底单</td>
+            <td style="color: red;">图纸</td>
+            <td colspan="2">自动链接一级交底单信息</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="color: red;">纸版资料与电子版资料是否一一对应</td>
+            <td>
+                <select class="select_class">
+                    <option value="是">是</option>
+                </select>
+            </td>
+            <td colspan="3">缺少资料描述</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="color: red;">人材机记取原则</td>
+            <td>自动连接一级交底单</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="color: red;">主材记取原则</td>
+            <td>自动连接一级交底单</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="color: red;">取费记取原则</td>
+            <td>自动连接一级交底单</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td rowspan="3" style="color: red;">招标文件要点 ：</td>
+            <td style="color: red;">招标范围</td>
+            <td><input type="file"></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="color: red;">计量规则</td>
+            <td><input type="file"></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="color: red;">特殊条款</td>
+            <td><input type="file"></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" style="color: red;">人员安排 ：</td>
+            <td style="color: red;">图形</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq 全英杰}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td style="color: red;">零星算量</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq '李静'}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td colspan="2" style="color: red;">清单编制</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq '崔玲玲'}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td style="color: red;">钢筋</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq '高丹丹'}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td style="color: red;">建筑面积</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq '李静'}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td colspan="2" style="color: red;">提量</td>
+            <td>
+                <select name="figure_user_type" class="select_class">
+                    <c:forEach items="${fns:getDictList('figure_user_type')}" var="user">
+                        <option value="${user.value}"
+                                <c:if test="${user.value eq '李兴辉'}">
+                                    selected = "selected"
+                                </c:if>>
+                                ${user.label}
+                        </option>
+                    </c:forEach>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: red;">完成时间 ：</td>
+            <td colspan="2" style="color: red;">具体到哪天，所写日期均为当天下班前</td>
+            <td>如有具体几点要求在此填写</td>
+            <td style="color: red;">实际完成时间</td>
+            <td colspan="2" style="color: red;">具体到哪天，所写日期均为当天下班前</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td style="color: red;">质量要求：</td>
+            <td colspan="7">零误差</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="color: red;">其他需要说明的问题 ：</td>
+            <td rowspan="2">共性问题</td>
+            <td colspan="2">自动连接一级交底单</td>
+            <td colspan="4">可自行与业主专业负责人沟通增加</td>
+        </tr>
+        <tr>
+            <td colspan="2">自动连接一级交底单</td>
+            <td colspan="4"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">土建</td>
+            <td colspan="2">自动连接一级交底单</td>
+            <td colspan="4">可自行与业主专业负责人沟通增加</td>
+        </tr>
+        <tr>
+            <td colspan="2">自动连接一级交底单</td>
+            <td colspan="4"></td>
+        </tr>
+
+
+        <tr>
+            <td style="color: red;">交底人签字：</td>
+            <td colspan="3">自动连接一级交底单中专业被交底人</td>
+            <td colspan="2">联系电话</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td style="color: red;">被交底人完成交底时间：</td>
+            <td colspan="7">0.5工作日</td>
+        </tr>
+        <tr>
+            <td style="color: red;">被交底人签字:</td>
+            <td colspan="7"></td>
+        </tr>
         </thead>
     </table>
 </form>
